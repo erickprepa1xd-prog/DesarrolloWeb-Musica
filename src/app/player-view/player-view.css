@@ -1,0 +1,53 @@
+.player-view-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-content {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.song-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.list-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .player-view-container {
+    padding: 20px 12px;
+  }
+
+  .player-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .song-section,
+  .list-section {
+    max-width: 100%;
+    width: 100%;
+  }
+}

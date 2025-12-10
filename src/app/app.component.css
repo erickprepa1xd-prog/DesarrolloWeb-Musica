@@ -1,0 +1,33 @@
+.app-container {
+  min-height: 100vh;
+  background: #18191C; 
+  padding-bottom: 120px; 
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.app-header h1 {
+  color: #EAEAEA; 
+  font-size: 40px; 
+  margin: 0;
+  font-weight: 800; 
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.app-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+
+.search-section {
+  padding: 0 0 40px; 
+}
+
+.content-section {
+  min-height: 400px;
+}

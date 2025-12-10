@@ -1,0 +1,29 @@
+<div class="track-list-container" *ngIf="hasTracks() && !isLoading">
+  <div class="track-list-card">
+    <div class="track-list-header">
+      <h3>Playlist</h3>
+      <span class="track-count">{{getTrackCount()}}</span>
+    </div>
+    
+    <div class="track-list">
+      <div 
+        class="track-item"
+        *ngFor="let track of tracks; let i = index"
+        [class.active]="isCurrentTrack(track)"
+        (click)="selectTrack(track)"
+      >
+        <div class="track-number">
+          <span class="number">{{getTrackNumber(i)}}</span>
+          <span class="play-icon">▶</span>
+        </div>
+        
+        <div class="track-info">
+          <div class="track-name" [title]="track.name">{{track.name}}</div>
+          <div class="track-artist" [title]="track.artistName">{{track.artistName}}</div>
+        </div>
+        
+        <div class="track-duration">{{getDuration(track.duration)}}</div>
+      </div>
+    </div>
+  </div>
+</div>
